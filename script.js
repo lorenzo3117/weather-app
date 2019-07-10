@@ -38,16 +38,24 @@ function weather() {
                 for (var i = 0; i < data.length; i++) {
                     let rowData = data[i];
                     var row = table.insertRow(table.rows.length);
-                    // This var exist to make the first letter capitalized
+
+                    // This var exists to make the first letter capitalized
                     var weatherDescription = rowData.weather[0].description;
-                    
+
+                    // Make an a-tag for link to google maps
+                    var mapLink = document.createElement("a");
+                    mapLink.innerHTML = "Link";
+                    mapLink.target = "_blank";
+                    mapLink.href = "https://www.google.com/maps/place/" + city;
+                                        
+                    // Making rows in table
                     row.insertCell(0).innerHTML = rowData.name;
                     row.insertCell(1).innerHTML = rowData.main.temp + " °C";
                     row.insertCell(2).innerHTML = rowData.main.humidity + "%";
                     row.insertCell(3).innerHTML = capitalize(weatherDescription);
-                }  
+                    row.insertCell(4).appendChild(mapLink); // appendChild for anchor tag because innerHTML only works with text
+                }
             }
-        
         })
 
         // Catches any errors with the api request and displays the error message

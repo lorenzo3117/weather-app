@@ -39,6 +39,10 @@ body {
   color: white;
 }
 
+body a {
+  color: white;
+}
+
 body .content {
   font-size: 1.8em;
   text-align: center;
