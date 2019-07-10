@@ -53,27 +53,6 @@ body {
     font-family: 'Montserrat', sans-serif;
     color: white;
 
-    button {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 0.6em;
-        color:#FFFFFF;
-        display:inline-block;
-        padding:0.35em 1.2em;
-        border:0.1em solid #FFFFFF;
-        border-radius:0.12em;
-        box-sizing: border-box;
-        text-decoration:none;
-        background-color: rgba(0,0,0,0);
-        text-align:center;
-        transition: all 0.2s;
-        cursor: pointer;
-        outline: none;
-    }
-    button:hover {
-        color:#000000;
-        background-color:#FFFFFF;
-    }
-    
     .content {
         font-size: 1.8em;
         text-align: center;
@@ -88,6 +67,43 @@ body {
             padding-bottom: 5px;
             border-bottom: 2px solid white;
             margin: 120px;
+        }
+
+        .input {
+            display: flex;
+            justify-content: center;
+
+            input {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 0.6em;
+                display: block;
+                margin-right: 20px;
+                padding: 5px;
+                border: none;
+                border-radius:0.12em;
+                outline: none;
+            }
+    
+            button {
+                font-family: 'Montserrat', sans-serif;
+                font-size: 0.6em;
+                color:#FFFFFF;
+                display:inline-block;
+                padding:0.35em 1.2em;
+                border:0.1em solid #FFFFFF;
+                border-radius:0.12em;
+                box-sizing: border-box;
+                text-decoration:none;
+                background-color: rgba(0,0,0,0);
+                text-align:center;
+                transition: all 0.2s;
+                cursor: pointer;
+                outline: none;
+            }
+            button:hover {
+                color:#000000;
+                background-color:#FFFFFF;
+            }
         }
 
         #warningMessage {

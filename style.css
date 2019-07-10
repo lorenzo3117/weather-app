@@ -39,30 +39,6 @@ body {
   color: white;
 }
 
-body button {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 0.6em;
-  color: #FFFFFF;
-  display: inline-block;
-  padding: 0.35em 1.2em;
-  border: 0.1em solid #FFFFFF;
-  border-radius: 0.12em;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  text-decoration: none;
-  background-color: rgba(0, 0, 0, 0);
-  text-align: center;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-  cursor: pointer;
-  outline: none;
-}
-
-body button:hover {
-  color: #000000;
-  background-color: #FFFFFF;
-}
-
 body .content {
   font-size: 1.8em;
   text-align: center;
@@ -85,6 +61,50 @@ body .content h1 {
   padding-bottom: 5px;
   border-bottom: 2px solid white;
   margin: 120px;
+}
+
+body .content .input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+body .content .input input {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6em;
+  display: block;
+  margin-right: 20px;
+  padding: 5px;
+  border: none;
+  border-radius: 0.12em;
+  outline: none;
+}
+
+body .content .input button {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6em;
+  color: #FFFFFF;
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #FFFFFF;
+  border-radius: 0.12em;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0);
+  text-align: center;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+  cursor: pointer;
+  outline: none;
+}
+
+body .content .input button:hover {
+  color: #000000;
+  background-color: #FFFFFF;
 }
 
 body .content #warningMessage {

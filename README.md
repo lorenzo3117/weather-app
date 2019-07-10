@@ -3,8 +3,7 @@ A simple weather app made in JavaScript using the https://openweathermap.org/ ap
 
 ## To do
 - Change table and button position so they stay in place DONE
+- Add better input field DONE
 - Catch any errors while fetching so .then method aren't executed DONE
-- Reset order
-- Remove city button
-- Change order
+- Reset order, remove city button, change order
 - Make it mobile friendly one way or another

@@ -1,9 +1,12 @@
 //Weather app
-function weather(city) {
-    // Prompt + general information
-    var city = prompt("Which city?");
+function weather() {
+    // Take city and reset input field
+    var city = document.querySelector("#cityInput").value;
+    document.querySelector("#cityInput").value = "";
+
+    // General variables
     const api = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=02587cc48685af80ea225c1601e4f792&units=metric";
-    var warning = document.querySelector("#warningMessage");    
+    var warning = document.querySelector("#warningMessage");
 
     // Fetch the api
     fetch(api)
