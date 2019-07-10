@@ -34,6 +34,17 @@ body {
   background-size: 400% 400%;
   -webkit-animation: Gradient 15s ease infinite;
   animation: Gradient 15s ease infinite;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+}
+
+body h1 {
+  font-size: 2.4em;
+  letter-spacing: 2px;
+  padding-bottom: 5px;
+  border-bottom: 2px solid white;
+  top: 150px;
+  position: absolute;
 }
 
 body button {
@@ -61,10 +72,8 @@ body button:hover {
 }
 
 body .content {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2em;
+  font-size: 1.8em;
   text-align: center;
-  color: white;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -81,7 +90,8 @@ body .content {
           align-items: center;
 }
 
-body .content p {
+body .content #warningMessage {
+  display: none;
   margin-top: 10px;
 }
 

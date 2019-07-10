@@ -48,6 +48,18 @@ body {
     -webkit-animation: Gradient 15s ease infinite;
     -moz-animation: Gradient 15s ease infinite;
     animation: Gradient 15s ease infinite;
+    
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+
+    h1 {
+        font-size: 2.4em;
+        letter-spacing: 2px;
+        padding-bottom: 5px;
+        border-bottom: 2px solid white;
+        top: 150px;
+        position: absolute;
+    }
 
     button {
         font-family: 'Montserrat', sans-serif;
@@ -71,17 +83,16 @@ body {
     }
     
     .content {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 2em;
+        font-size: 1.8em;
         text-align: center;
-        color: white;
         height: 100vh;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
 
-        p {
+        #warningMessage {
+            display: none;
             margin-top: 10px
         }
 

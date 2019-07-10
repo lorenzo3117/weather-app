@@ -2,20 +2,20 @@
 function weather(city) {
     var city = prompt("Which city?");
     const api = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=02587cc48685af80ea225c1601e4f792&units=metric";
-    var textHolder = document.querySelector("#temperature");    
+    var warning = document.querySelector("#warningMessage");    
 
     fetch(api)
         .then(function (weatherResponse) {
             return weatherResponse.json()
         })
         .then(function (weatherData) {
-            textHolder.innerHTML = "";
+            warning.style.display = "none";
 
             var arrayJSON = [weatherData];
             createTable(document.querySelector("#table"), arrayJSON);
 
             function createTable(table, data) {
-                document.querySelector("#table").style.display = "inline-block";
+                document.querySelector("#table").style.display = "block";
                 document.querySelector("#cityButton").innerHTML = "Add city";
                 
                 for (var i = 0; i < data.length; i++) {
@@ -31,6 +31,6 @@ function weather(city) {
         
         })
         .catch(function () {
-            textHolder.innerHTML = "Please enter a valid city!";
+            warning.style.display = "block";
         });
 }
