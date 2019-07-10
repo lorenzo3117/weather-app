@@ -4,7 +4,7 @@ function weather(city) {
     const api = "https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=02587cc48685af80ea225c1601e4f792&units=metric";
     var warning = document.querySelector("#warningMessage");    
 
-    fetch(api)
+    fetch(api)        
         .then(function (weatherResponse) {
             return weatherResponse.json()
         })
