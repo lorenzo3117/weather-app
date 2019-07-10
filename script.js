@@ -42,14 +42,17 @@ function weather() {
                     // This var exists to make the first letter capitalized
                     var weatherDescription = rowData.weather[0].description;
 
+                    // Take latitude and longitude for google maps link
+                    var lat = rowData.coord.lat;
+                    var long = rowData.coord.lon;
                     // Make an a-tag for link to google maps
                     var mapLink = document.createElement("a");
                     mapLink.innerHTML = "Link";
                     mapLink.target = "_blank";
-                    mapLink.href = "https://www.google.com/maps/place/" + city;
+                    mapLink.href = "https://www.google.com/maps/search/?api=1&query=" + lat + "," + long;
                                         
                     // Making rows in table
-                    row.insertCell(0).innerHTML = rowData.name;
+                    row.insertCell(0).innerHTML = rowData.name + ", " + rowData.sys.country;
                     row.insertCell(1).innerHTML = rowData.main.temp + " °C";
                     row.insertCell(2).innerHTML = rowData.main.humidity + "%";
                     row.insertCell(3).innerHTML = capitalize(weatherDescription);
