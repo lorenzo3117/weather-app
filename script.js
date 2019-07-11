@@ -1,6 +1,6 @@
 //Weather app
 function weather() {
-    // Take city and reset input field
+    // Take city from input and reset input field
     var city = document.querySelector("#cityInput").value;
     document.querySelector("#cityInput").value = "";
 
@@ -14,32 +14,31 @@ function weather() {
         // Check if there are any errors with the function handleErrors
         .then(handleErrors)
 
-        // If the are no errors, get JSON response from api
-        .then(function (weatherResponse) {
-            return weatherResponse.json()
+        // If the are no errors, get Json response from api
+        .then(function (JsonResponse) {
+            return JsonResponse.Json();
         })
 
-        // Use api data to change website
+        // Use api data to make table
         .then(function (weatherData) {
             // Removes warning message
             warning.style.display = "none";
 
-            // Puts the JSON into an array and launch createTable function
-            var arrayJSON = [weatherData];
-            createTable(document.querySelector("#table"), arrayJSON);
+            // Puts the Json into an array and launches createTable function
+            var arrayJson = [weatherData];
+            createTable(document.querySelector("#table"), arrayJson);
 
             // Function to create the table
             function createTable(table, data) {
-                // Makes table visible and changes button text
+                // Makes table visible
                 document.querySelector("#table").style.display = "block";
-                document.querySelector("#cityButton").innerHTML = "Add city";
                 
-                // Goes through array and makes the rows for the table
-                for (var i = 0; i < data.length; i++) {
+                // Goes through the array and makes the rows for the table
+                for (let i = 0; i < data.length; i++) {
                     let rowData = data[i];
                     var row = table.insertRow(table.rows.length);
 
-                    // This var exists to make the first letter capitalized
+                    // This var exists to make the first letter capitalized (see insertCell(3))
                     var weatherDescription = rowData.weather[0].description;
 
                     // Take latitude and longitude for google maps link
@@ -61,7 +60,7 @@ function weather() {
             }
         })
 
-        // Catches any errors with the api request and displays the error message
+        // Catches any errors with the api request and displays the warning message
         .catch(function () {
             warning.style.display = "block";
         });
