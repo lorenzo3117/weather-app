@@ -6,5 +6,6 @@ A simple weather app made in JavaScript using the https://openweathermap.org/ ap
 - Add better input field DONE
 - Catch any errors while fetching so .then method aren't executed DONE
 - Add Google Maps link DONE
+- Use async function and await instead of .then
 - Reset order, remove city button, change order
 - Make it mobile friendly one way or another
