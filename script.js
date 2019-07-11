@@ -15,8 +15,8 @@ function weather() {
         .then(handleErrors)
 
         // If the are no errors, get Json response from api
-        .then(function (JsonResponse) {
-            return JsonResponse.Json();
+        .then(function (apiResonse) {
+            return apiResonse.json()
         })
 
         // Use api data to make table
@@ -30,7 +30,7 @@ function weather() {
 
             // Function to create the table
             function createTable(table, data) {
-                // Makes table visible
+                // Makes the table visible
                 document.querySelector("#table").style.display = "block";
                 
                 // Goes through the array and makes the rows for the table
