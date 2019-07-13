@@ -6,6 +6,7 @@ async function weather() {
         document.querySelector("#cityInput").value = "";
 
         // Get api response and make it into a Json
+        // UNSECURED API KEY, but I see everytime it get used so I can cancel it if it get stolen
         const apiResponse = await fetch("https://api.openweathermap.org/data/2.5/weather?q=" + city + "&appid=02587cc48685af80ea225c1601e4f792&units=metric");
         const jsonData = await apiResponse.json();
 
