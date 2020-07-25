@@ -38,7 +38,7 @@ function updateTable(results, data) {
         // Make google map links
         const googleMapsLink = `https://www.google.com/maps/search/?api=1&query=${data.coord.lat},${data.coord.lon}`
         // Make new result card
-        let newResultCard = `<div class="result"><h2>${data.name}, ${data.sys.country}</h2><p>Temperature: ${data.main.temp}C</p><p>Humidity: ${data.main.humidity}%</p><p>Status: ${data.weather[0].description}</p><div class="link"><p>Map: <a href="${googleMapsLink}">link</a></p></div></div>`
+        let newResultCard = `<div class="result"><h2>${data.name}, ${data.sys.country}</h2><p>Temperature: ${data.main.temp}C</p><p>Humidity: ${data.main.humidity}%</p><p>Status: ${data.weather[0].description}</p><div class="link"><p>Map: <a href="${googleMapsLink}" target="_blank">link</a></p></div></div>`
         // Adds tje new result card to results div
         results.innerHTML += newResultCard
     } catch (error) {
