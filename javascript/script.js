@@ -1,4 +1,4 @@
-// letiables
+// Variables
 const warningMessage = document.querySelector("#warningMessage")
 const cityInput = document.querySelector("#cityInput")
 const results = document.querySelector(".results")
