@@ -5,33 +5,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Weather app</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="javascript/script.js" defer></script>
 </head>
 <body>
 
-    <section class="content">
-            <h1>Welcome to the weather app</h1>
+    <section class="app">
+        <h1>Welcome to the weather app</h1>
 
-            <div class="input">
-                <input id="cityInput" type="text" placeholder="Please enter a city">
-                <button id="cityButton" onclick="weather()">Add city</button>
-            </div>
-                
-            <div>
-                <p id="warningMessage">Please enter a valid city!</p>
-
-                <table id="table">
-                    <tr>
-                        <th>City</th>
-                        <th>Temperature</th>
-                        <th>Humidity</th>
-                        <th>Weather status</th>
-                        <th>Map</th>
-                    </tr>
-                </table>
-            </div>
+        <div id="warningMessage">
+            <p>Please enter a valid city!</p>
+        </div>
+        <div class="input">
+            <input id="cityInput" type="text" placeholder="Please enter a city">
+            <button id="cityButton" onclick="weather()">Add city</button>
+        </div>
+            
+        <div class="results">
+        </div>
     </section>    
 
-<script src="script.js"></script>
 </body>
 </html>
